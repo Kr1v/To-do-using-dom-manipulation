@@ -60,6 +60,8 @@ html,body{
     margin:10px;
     size:2rem;
     font-weight: 700;
+      position: relative;
+    z-index: 1;
 
 }
 .butty:hover{
@@ -161,7 +163,7 @@ html,body{
 }
 .leaves::after{
    content: '🍃';
-  font-size:1.2rem;
+  font-size:1.8rem;
   display: inline-block;
   
 
@@ -207,6 +209,11 @@ html,body{
     opacity:0.5;
    } 
 }
+.main{
+    position: relative;
+    z-index: 1;
+}
+
 
 
 
