@@ -33,5 +33,5 @@ function createleave(count){
     }   
     
 }
-setInterval(()=>{createleave(5)},300);
+setInterval(()=>{createleave(3)},300);
 
