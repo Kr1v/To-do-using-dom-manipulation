@@ -1,7 +1,10 @@
 html,body{
     background-color: #c6dba3;
-    
+    margin:0;
+    padding:0;
     height:100%;
+    
+
     
 }
 .to-do{
@@ -10,10 +13,14 @@ html,body{
     
 
 }
+
 .input-txt{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position:relative;
+     z-index:1;
+   
 }
 .input-txt input{
     width:70%;
@@ -30,7 +37,9 @@ html,body{
 .input-txt input:hover{
     border:2px solid blanchedalmond;
 }
-.logo{
+.title{
+    position: relative;
+    z-index:1;
     font-size: 2.5rem;
     display:flex;
     justify-content: center;
@@ -67,6 +76,9 @@ html,body{
     margin:10px;
     color:#6b4f3b;
     animation:blink 1s step-end infinite;
+     position:relative;
+     z-index:1;
+   
 }
 #dots{
     display:inline-block;
@@ -102,6 +114,9 @@ html,body{
     position:relative;
     box-shadow:0px 4px 8px rgba(0,0,0,0.1);
     line-height:2;
+    position:relative;
+     z-index:1;
+   
 
 }
 .container{
@@ -130,17 +145,67 @@ html,body{
 }
 
 
-.logo::after {
+.star::after {
   content: '✨';
   animation: twinkle 1.2s infinite alternate;
   display: inline-block;
   margin-left: 8px;
   vertical-align: text-bottom;
 }
+.star{
+    vertical-align: text-top;
+    font-size:2rem;
+    padding:5px;
+    
 
+}
+.leaves::after{
+   content: '🍃';
+  font-size:1.2rem;
+  display: inline-block;
+  
+
+}
 @keyframes twinkle {
   0% { transform: rotate(0deg) scale(1); opacity: 1; }
   100% { transform: rotate(20deg) scale(1.2); opacity: 0.6; }
+}
+.leaf-background{
+    position:fixed;
+    z-index:0;
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+    pointer-events:none;
+    pointer-events:none;
+
+}
+.leaves {
+  position: absolute;
+  top:-80px;
+  animation-name:fall;
+  animation-timing-function: linear;
+  animation-iteration-count:  infinite;
+ 
+  opacity:0.8;
+  display: inline-block; 
+  margin:2rem;
+  
+}
+@keyframes fall{
+    0%{transform :translateY(0)
+    rotate(0deg);
+   opacity:0.9;}
+   50%{
+    transform :translateY(50vh)
+    rotate(30deg);
+    opacity:1;
+   }
+   100%{
+    transform:translateY(100vh)
+    rotate(-20deg);
+    opacity:0.5;
+   } 
 }
 
 
